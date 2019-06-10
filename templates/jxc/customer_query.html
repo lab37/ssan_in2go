@@ -1,0 +1,36 @@
+<fieldset>
+	<legend><span>查询客户</span></legend>
+	<label for="customer_cstmname">客户名称：</label><input class="input" type="text" id="cstmname" name="customer_cstmname" />
+	<label for="customer_city">地市：</label><input class="input" type="text" id="city" name="customer_city" />
+	<label for="customer_area">区县：</label><input class="input" type="text" id="area" name="customer_area" />
+	<label for="customer_police">归属派出所：</label><input class="input" type="text" id="police" name="customer_police" />
+	</br>
+	<button id="customer_query_some">查询</button>
+	<button id="customer_query_all">查询全部</button>
+	<button id="export" style="background-color:darkgreen">导出结果</button>
+</fieldset>
+<table id="customer_results" class="sortable">
+	<thead>
+		<tr>
+			<th data-sort="iint">ID</th>
+			<th>客户名称</th>
+			<th>客户类型</th>
+			<th>地市</th>
+			<th>区县</th>
+			<th>地址</th>
+			<th>法人</th>
+			<th>电话</th>
+			<th>归属派出所</th>
+			<th>坐标</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody id='rows'>
+	</tbody>
+</table>
+<fieldset id='change_table'>
+
+</fieldset>
+<script src="/static/js/jxc/customer_query.js"></script>
+<script src="/static/js/sort-table.js"></script>
+<link rel="stylesheet" href="/static/css/jxc_query.css">

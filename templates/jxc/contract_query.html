@@ -1,0 +1,44 @@
+<fieldset>
+	<legend><span>合同查询</span></legend>
+	<label for="contract_ccsn">合同号码：</label><input type="text" id="ccsn" name="contract_ccsn" />
+
+	<label for="contract_create_date">签定日期：</label><input class="input" type="text" id="create_date" name="contract_create_date" />
+	<label for="contract_cstmname">客户名称：</label><input class="input" type="text" id="cstmname" name="contract_cstmname" />
+	<label for="contract_prdtname">产品名称：</label><input class="input" type="text" id="prdtname" name="contract_prdtname" />
+	
+	<label for="contract_vector">购进售出：</label><select class="input" id="vector" name="contract_vector">
+		<option value=1>售出</option>
+		<option value=0>购进</option>
+	</select>
+	</br>
+	<button id="contract_query_some">查询</button>
+	<button id="contract_query_all">查询全部</button>
+	<button id="export" style="background-color:darkgreen">导出结果</button>
+</fieldset>
+<table  id="contract_results" class="sortable">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>合同编号</th>
+			<th>购进售出</th>			
+			<th data-sort="date">签定日期</th>
+			<th>合同类型</th>			
+			<th>发票类型</th>			
+			<th>客户名称</th>
+			<th>产品名称</th>
+			<th>规格</th>
+			<th data-sort="ffloat">价格</th>
+			<th data-sort="iint">数量</th>
+			<th>备注</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody id='rows'>
+	</tbody>
+</table>
+<fieldset id='change_table'>
+
+</fieldset>
+<script src="/static/js/jxc/contract_query.js"></script>
+<script src="/static/js/sort-table.js"></script>
+<link rel="stylesheet" href="/static/css/jxc_query.css">

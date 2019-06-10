@@ -1,0 +1,20 @@
+<section id="add_form">
+	<h3>增加回款</h3>
+	<p>
+	<label for="payment_cstmname">客户名称：</label><input type="text" id="cstmname" name="payment_cstmname" />
+	<label for="payment_create_date">回款日期：</label><input type="text" id="create_date" name="payment_create_date" />
+	<label for="payment_amount">回款金额：</label><input type="text" id="amount" name="payment_amount" />
+	<label for="paymente_pmtype">&nbsp;&nbsp;&nbsp;&nbsp;发票类型：</label><select id="pmtype" name="payment_pmtype">
+		<option value="收据">电汇</option>
+		<option value="现金">现金</option>
+	</select>
+	</p>
+	<p>
+	<label for="payment_remark">备注信息：</label><input value="无" type="text" id="remark" name="payment_remark" />
+	</p>
+	<button id="payment_add">添加</button>
+</section>
+</section>
+<section id="rsts"></section>
+<script src="/static/js/jxc/payment_add.js" ></script>
+<link rel="stylesheet" href="/static/css/jxc_add.css">

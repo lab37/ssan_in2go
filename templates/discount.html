@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <title>折让计算器</title>
+  <link rel="shortcut icon" href="/static/favicon.png" type=image/x-icon>
+  <link rel="stylesheet" href="/static/css/discount.css">
+  <link rel="stylesheet" href="/static/css/jquery-ui.min.css">
+	<script src="/static/js/jquery-2.1.1.min.js"></script>
+  <script src="/static/js/jquery-ui.min.js"></script>
+  <!-- 用于设置滚动条样式 -->
+  <style>
+    .ui-progressbar {
+      position: relative;
+    }
+    #progress-label {
+      position: absolute;
+      left: 50%;
+      top: 4px;
+      font-weight: bold;
+      text-shadow: 1px 1px 0 #fff;
+    }
+    </style>
+  </head>
+  
+<body>
+  <h1><a href="#" style="color: #333"><img src="static/logo.png" width="64" height="64" style="vertical-align: middle">慧慧神器，GO！GO！GO！</a></h1>
+  <section id="master">
+	  <h3>合同内容</h3>
+	<fieldset class="hetong">
+	  <table id="hetong">
+         <tr>
+           <td>药品名称</td>
+           <td>数量(件)</td>
+           <td>件装量</td>
+		   <td>单价</td>
+           <td>最低价</td>
+           <td>最高价</td>
+         </tr>
+		 <tr>
+		   <td><input /></td>
+		   <td><input /></td>
+		   <td><input /></td>
+		   <td><input /></td>
+		   <td><input /></td>
+		   <td><input /></td>
+		 </tr>
+		</table>
+	</fieldset>
+	<button id="hetong_addItem">增加品种</button><button id="hetong_delItem">删除品种</button>
+  </section>
+  
+  <section>
+    <h3>赠品内容</h3>
+	<fieldset class="zengping">
+	    <table id="patch">
+          <tr>
+           <td>药品名称</td>
+           <td>数量下限（件）</td>
+           <td>数量上限（件）</td>
+           <td>装量</td>
+           <td>最低价</td>
+           <td>最高价</td>
+          </tr>
+          <tr>
+		   <td><input /></td>
+		   <td><input /></td>
+		   <td><input /></td>
+		   <td><input /></td>
+		   <td><input /></td>
+		   <td><input /></td>
+		 </tr>
+		</table>
+	 </fieldset>
+	 <button id="patch_addItem">增加品种</button><button id="patch_delItem">删除品种</button>
+  </section>
+  
+  
+  <section id="tiaojian">
+    
+<!-- 加入滚动条 -->
+  <div id="progressbar"><div id="progress-label">未计算...</div></div>
+
+	 <button id="doit">开始计算</button>
+  </section>
+  <section  id="results">
+      
+  
+  
+  
+  </table>
+</section>
+  <p><em>说明：</em></p>
+  <p>1.所有的价格都是正常价格乘以100，不能有小数。结果的单价也是乘以100后的值。</p>
+  <p>2.最高价和最低价的差距一要尽量设置的小一些，不然要花费大量的时间计算。</p>
+  <p>3.品种名随便填写即可，这是你自己用来区分的，不影响计算。</p>
+  <section>
+  </section>
+ <script src="/static/js/discount.js"></script>
+</body>
+</html>

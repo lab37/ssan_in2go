@@ -1,0 +1,10 @@
+ERROR 2019/06/09 21:36:38 utils.go:100: When insert the instock get error: CHECK constraint failed: onway_products
+ERROR 2019/06/09 22:25:21 utils.go:100: When update the outstock get error: near "create": syntax error
+ERROR 2019/06/09 22:28:31 utils.go:100: When update the outstock get error: near "create": syntax error
+ERROR 2019/06/09 22:30:01 utils.go:100: When delete the outstock get error: no such column: new.quantity
+ERROR 2019/06/09 22:32:35 utils.go:100: When delete the outstock get error: no such column: new.quantity
+ERROR 2019/06/09 23:27:26 utils.go:100: When select all outstocks get error: sql: Scan error on column index 2, name "ivtype": unsupported Scan, storing driver.Value type <nil> into type *string
+ERROR 2019/06/10 21:56:50 utils.go:100: When select all payments get error: sql: expected 5 destination arguments in Scan, not 4
+ERROR 2019/06/10 23:26:54 utils.go:100: When select all payments get error: sql: expected 5 destination arguments in Scan, not 6
+ERROR 2019/06/10 23:27:14 utils.go:100: When select all payments get error: sql: expected 5 destination arguments in Scan, not 6
+ERROR 2019/06/10 23:27:36 utils.go:100: When select all payments get error: sql: expected 5 destination arguments in Scan, not 6

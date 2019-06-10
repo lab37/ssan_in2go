@@ -1,0 +1,34 @@
+<fieldset>
+	<legend><span>查询品种</span></legend>
+	
+	<label for="product_prdtname">产品名称：</label><input class="input" type="text" id="prdtname" name="product_prdtname" />
+	<label for="product_specific">产品规格：</label><input class="input" type="text" id="specific" name="product_specific" />
+	<label for="product_inventor">生产企业：</label><input class="input" type="text" id="inventor" name="product_inventor" />
+	</br>
+	<button id="product_query_some">查询</button>
+	<button id="product_query_all">查询全部</button>
+	<button id="export" style="background-color:darkgreen">导出结果</button>
+</fieldset>
+<table id="product_results" class="sortable">
+	<thead>
+		<tr>
+			<th>产品ID</th>
+			<th>产品名称</th>
+			<th>规格</th>
+			<th>生产企业</th>
+			<th>单位</th>
+			<th>发票类型</th>
+			<th>备注</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody id='rows'>
+	</tbody>
+</table>
+<fieldset id='change_table'>
+
+</fieldset>
+
+<script src="/static/js/jxc/product_query.js"></script>
+<script src="/static/js/sort-table.js"></script>
+<link rel="stylesheet" href="/static/css/jxc_query.css">

@@ -1,0 +1,38 @@
+<fieldset>
+	<legend><span>出库记录</span></legend>
+	<label for="outstock_cstmname">销售客户：</label><input class="input" type="text" id="cstmname" name="contract_cstmname" />
+	<label for="outstock_create_date">出库日期：</label><input class="input" type="text" id="create_date" name="outstock_create_date" />
+	<label for="outstock_prdtname">品种名称：</label><input class="input" type="text" id="prdtname" name="outstock_prdtname" /></br>
+	<label for="outstock_specific">产品规格：</label><input class="input" type="text" id="specific" name="outstock_specific" />
+	<label for="outstock_mac">产品MAC：</label><input class="input" type="text" id="mac" name="outstock_mac" />
+	<label for="outstock_remark">备注信息：</label><input class="input" type="text" id="remark" name="outstock_remark" />
+	</br>
+	<button id="outstock_query_some">查询</button>
+	<button id="outstock_query_all">查询全部</button>
+	<button id="export" style="background-color:darkgreen">导出结果</button>
+</fieldset>
+<table id="outstock_results" class="sortable">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>客户名称</th>
+			<th>产品名称</th>
+			<th>产品规格</th>
+			<th>MAC地址</th>
+			<th>SN号码</th>			
+			<th data-sort="date">入库日期</th>
+			<th data-sort="iint">数量</th>
+			<th>备注</th>
+			<th>操作</th>
+		</tr>
+		</tr>
+	</thead>
+	<tbody id='rows'>
+	</tbody>
+</table>
+<fieldset id='change_table'>
+
+</fieldset>
+<script src="/static/js/jxc/outstock_query.js"></script>
+<script src="/static/js/sort-table.js"></script>
+<link rel="stylesheet" href="/static/css/jxc_query.css">

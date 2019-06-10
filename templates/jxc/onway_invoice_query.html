@@ -1,0 +1,28 @@
+<fieldset>
+	<legend><span>购进未开票查询</span></legend>
+	<label for="onway_invoice_cstmname">客户名称：</label><input class="input" type="text" id="cstmname" name="onway_invoice_cstmname" />
+	<label for="onway_invoice_prdtname">产品名称：</label><input class="input" type="text" id="prdtname" name="onway_invoice_prdtname" />
+	<label for="onway_invoice_specific">产品规格：</label><input class="input" type="text" id="specific" name="onway_invoice_specific" />
+	</br>
+	</br>
+	<button id="onway_invoice_query_some">查询</button>
+	<button id="onway_invoice_query_all">查询全部</button>
+	<button id="export" style="background-color:darkgreen">导出结果</button>
+</fieldset>
+<table id="onway_invoice_results" class="sortable">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>客户名称</th>
+			<th>品种名称</th>
+			<th>品种规格</th>
+			<th data-sort="ffloat">差额</th>
+			<th>备注</th>
+		</tr>
+	</thead>
+	<tbody id='rows'>
+	</tbody>
+</table>
+<script src="/static/js/jxc/onway_invoice_query.js"></script>
+<script src="/static/js/sort-table.js"></script>
+<link rel="stylesheet" href="/static/css/jxc_query.css">

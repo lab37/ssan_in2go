@@ -1,0 +1,39 @@
+<section id="add_form">
+	<h3>增加合同</h3>
+	<p>
+		<label for="contract_ccsn">合同号码：</label><input type="text" id="ccsn" name="contract_ccsn" />
+		<label for="contract_create_date">签定日期：</label><input type="text" id="create_date"
+			name="contract_create_date" />
+			<label for="contract_cstmname">客户名称：</label><input type="text" id="cstmname" name="contract_cstmname" />
+	</p>
+	<p>
+		
+		<label for="contract_prdtname">品种名称：</label><input type="text" id="prdtname" name="contract_prdtname" />
+		<label for="contract_specific">品种规格：</label><input type="text" id="specific" name="contract_specific" />
+		<label for="contract_price">签定价格：</label><input type="text" id="price" name="contract_price" />
+	</p>
+	<p>
+		
+		<label for="contract_quantity">销售数量：</label><input type="text" id="quantity" name="contract_quantity" />
+		<label for="contract_remark">其它备注：</label><input type="text" id="remark" name="contract_remark" value="无" />
+		<label for="contract_cctype">付款类型：</label><select id="cctype" name="contract_cctype">
+				<option value="现款">现款</option>
+				<option value="赊销">赊销</option>
+			</select>
+			<label for="contract_vector">&nbsp;&nbsp;&nbsp;&nbsp;销售方向：</label><select id="vector" name="contract_vector">
+				<option value="1">售出</option>
+				<option value="0">购进</option>
+			</select>
+			<label for="contract_ivtype">&nbsp;&nbsp;&nbsp;&nbsp;发票类型：</label><select id="ivtype" name="contract_ivtype">
+					<option value="收据">收据</option>
+					<option value="普票">普票</option>
+					<option value="专票">专票</option>
+				</select>
+	
+
+	</p>
+	<button id="contract_add">添加</button>
+</section>
+<section id="rsts"></section>
+<script src="/static/js/jxc/contract_add.js"></script>
+<link rel="stylesheet" href="/static/css/jxc_add.css">
