@@ -1,8 +1,8 @@
 package main
 
 import (
-	"ssat/data"
-	// "fmt"
+	"ssan_in2go/data"
+	"fmt"
 	"net/http"
 	"strings"
 	"unicode"
@@ -18,37 +18,37 @@ func login(writer http.ResponseWriter, request *http.Request) {
 // GET /signup
 // Show the signup page
 func signup(writer http.ResponseWriter, request *http.Request) {
-	// sess, err := session(writer, request)
-	// if err != nil {
-	// 	http.Redirect(writer, request, "/login", 302)
+	sess, err := session(writer, request)
+	if err != nil {
+		http.Redirect(writer, request, "/login", 302)
 
-	// } else {
-		// user, err := sess.GetUser()
-		// if err != nil {
-		// 	http.Redirect(writer, request, "/login", 302)
-		// }
-		// if user.Email == "36ee@163.com" {
+	} else {
+		user, err := sess.GetUser()
+		if err != nil {
+			http.Redirect(writer, request, "/login", 302)
+		}
+		if user.Email == "36ee@163.com" {
 			generateHTML(writer, nil, "login.layout", "public.navbar", "signup")
-		// } else {
-		// 	fmt.Fprintf(writer, "只有周京成能添加帐号，请联系周京成")
-		// }
-	// }
+		} else {
+			fmt.Fprintf(writer, "只有周京成能添加帐号，请联系周京成")
+		}
+	}
 }
 
 // POST /signup
 // Create the user account
 func signupAccount(writer http.ResponseWriter, request *http.Request) {
-	// sess, err := session(writer, request)
-	// if err != nil {
-	// 	http.Redirect(writer, request, "/login", 302)
+	sess, err := session(writer, request)
+	if err != nil {
+		http.Redirect(writer, request, "/login", 302)
 
-	// } else {
-		// userNow, err := sess.GetUser()
-		// if err != nil {
-		// 	http.Redirect(writer, request, "/login", 302)
+	} else {
+		userNow, err := sess.GetUser()
+		if err != nil {
+			http.Redirect(writer, request, "/login", 302)
 
-		// }
-		// if userNow.Email == "36ee@163.com" {
+		}
+		if userNow.Email == "36ee@163.com" {
 
 			err := request.ParseForm()
 			if err != nil {
@@ -63,10 +63,10 @@ func signupAccount(writer http.ResponseWriter, request *http.Request) {
 				danger(err, "Cannot create user")
 			}
 			http.Redirect(writer, request, "/login", 302)
-		// } else {
-		// 	fmt.Fprintf(writer, "注册失败！只有周京成能添加帐号，请联系周京成")
-		// }
-	// }
+		} else {
+			fmt.Fprintf(writer, "注册失败！只有周京成能添加帐号，请联系周京成")
+		}
+	}
 }
 
 // POST /authenticate

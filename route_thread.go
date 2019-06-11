@@ -1,7 +1,7 @@
 package main
 
 import (
-	"ssat/data"
+	"ssan_in2go/data"
 	"fmt"
 	"net/http"
 )

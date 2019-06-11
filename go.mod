@@ -1,4 +1,4 @@
-module ssat
+module ssan_in2go
 
 go 1.12
 
